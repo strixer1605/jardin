@@ -11,6 +11,6 @@
     session_destroy();
 
     // Redireccionar al usuario a la página de inicio o a donde desees
-    header("Location: ../login.php"); // Cambia "index.php" por la URL de tu página principal
+    header("Location: ../index.php"); // Cambia "index.php" por la URL de tu página principal
     exit();
 ?>

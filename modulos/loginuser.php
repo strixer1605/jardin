@@ -59,17 +59,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     if ($cargoId == 1) {
                         $_SESSION['Cargo'] = "Directivo";
                         http_response_code(200);
-                        echo json_encode(array('success' => true, 'message' => 'Bienvenido', 'redirect' => 'main/index.php'));
+                        echo json_encode(array('success' => true, 'message' => 'Bienvenido', 'redirect' => '../index.php'));
                         exit;
                     } elseif ($cargoId == 2) {
                         $_SESSION['Cargo'] = "Maestra";
                         http_response_code(200);
-                        echo json_encode(array('success' => true, 'message' => 'Bienvenido', 'redirect' => 'main/indexMaestra.php'));
+                        echo json_encode(array('success' => true, 'message' => 'Bienvenido', 'redirect' => '../indexMaestra.php'));
                         exit;
                     } elseif ($cargoId == 3) {
                         $_SESSION['Cargo'] = "Maestra";
                         http_response_code(200);
-                        echo json_encode(array('success' => true, 'message' => 'Bienvenido', 'redirect' => 'main/indexUsuarios.php'));
+                        echo json_encode(array('success' => true, 'message' => 'Bienvenido', 'redirect' => '../indexUsuarios.php'));
                         exit;
                     } 
                     else {
