@@ -40,7 +40,7 @@
 <div id="container">
     <div id="inner-container">
         <div class="item" style="background-color: #006837;">
-            <a href="#"><img src="imagenes/profesora.png" class="imgBtn" alt="Novedades"></a>
+            <a href="pestañas/novedades.html"><img src="imagenes/profesora.png" class="imgBtn" alt="Novedades"></a>
             <p class="span">NOVEDADES</p>
         </div>
         <div class="item" style="background-color: #f1db3a;">
