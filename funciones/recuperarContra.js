@@ -2,7 +2,7 @@ $(document).ready(function() {
     $('#recuperar').click(function() {
         let correo = $('#correo').val();
         console.log(correo);
-
+        
         // Validar que el campo de correo no esté vacío
         if (correo === '') {
             alert('Por favor, Ingrese un correo valido.');
@@ -14,9 +14,9 @@ $(document).ready(function() {
         if (!emailFormat.test(correo)) {
             alert('Por favor, ingrese un correo electrónico válido.');
             return;
-        }
-        
-        $.post('modulos/recuperarContra.php', {
+            }
+            
+        $.post('../modulos/recuperarContra.php', {
             data_correo: correo
         })
         .done(function(response) {

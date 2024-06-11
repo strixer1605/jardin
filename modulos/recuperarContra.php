@@ -46,7 +46,7 @@ if ($resultado->num_rows > 0) {
         $insertStmt->execute();
 
         // Generar el enlace de confirmación con el token
-        $enlace_confirmacion = "http://localhost/jardin901/modulos/cambiarContra.php?token=" . $token;
+        $enlace_confirmacion = "http://localhost/jardin/modulos/cambiarContra.php?token=" . $token;
         
         // Construir el cuerpo del mensaje
         $mensaje = "<p>Saludos,</p>";

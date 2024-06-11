@@ -15,9 +15,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->execute();
 
     // Redirigir al usuario
-    header("Location: ../login.php?message=success_password");
+    header("Location: ../main/login.php?message=success_password");
 } else {
-    header("Location: ../login.php?message=error");
+    header("Location: ../main/login.php?message=error");
 }
 
 $conexion->close();
