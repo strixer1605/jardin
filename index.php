@@ -24,11 +24,12 @@
     <title>Jardin 901</title>
 </head>
 <body>
+    
 <div id="containerHead">
     <div id="inner-containerHead">
-        <div class="d-flex flex-column align-items-start">
-            <a id="sessionButton" href="main/login.php" class="btn btn-success nav-link">Iniciar sesión</a>
-            <a id="logoutLink" href="modulos/logout.php" class="btn btn-danger nav-link d-none">Cerrar sesión</a>
+        <div class="d-flex flex-column align-items-center">
+            <a id="sessionButton" href="main/login.php" class="btn btn-success">Iniciar sesión</a>
+            <a id="logoutLink" href="modulos/logout.php" class="btn btn-danger d-none">Cerrar sesión</a>
         </div>
         <div class="itemHead">
             <a href="#"><img src="imagenes/libro.png" class="imgBtnHead" alt="Novedades"></a>
@@ -55,8 +56,8 @@
             <p class="span">SALITAS</p>
         </div>
         <div class="item" style="background-color: #e9765b;">
-            <a href="#"><img src="imagenes/chicos.png" class="imgBtn" alt="Proyecto"></a>
-            <p class="span">PROYECTO</p>
+            <a href="#"><img src="imagenes/chicos.png" class="imgBtn" alt="Proyectos"></a>
+            <p class="span">PROYECTOS</p>
         </div>
         <div class="item" style="background-color: #e51d1d;">
             <a href="#"><img src="imagenes/calendario.png" class="imgBtn" alt="Calendario"></a>
@@ -64,7 +65,7 @@
         </div>
     </div>
 </div>
-<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+Y5HcW1cXlFY1oBoOlO8HnNQ8VHqC" crossorigin="anonymous"></script> -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+Y5HcW1cXlFY1oBoOlO8HnNQ8VHqC" crossorigin="anonymous"></script>
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         const usuarioLogueado = <?php echo json_encode($usuarioLogueado); ?>;
@@ -75,8 +76,8 @@
             const sessionButton = document.getElementById('sessionButton');
             sessionButton.textContent = `Bienvenido ${usuario} ${apellido}`;
             sessionButton.classList.remove('btn-success');
-            sessionButton.classList.add('btn-primary');
-            sessionButton.href = "logout.php";
+            // sessionButton.classList.add('btn-primary');
+            sessionButton.href = "";
             
             const logoutLink = document.getElementById('logoutLink');
             logoutLink.classList.remove('d-none');

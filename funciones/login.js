@@ -94,7 +94,7 @@ function loginVerificacion(dni, contraseña) {
         })
     };
 
-    fetch('http://localhost/jardin901/modulos/loginuser.php', opciones)
+    fetch('http://localhost/jardin/modulos/loginuser.php', opciones)
     .then(response => {
         if (!response.ok) {
             throw new Error('Error en el registro');
