@@ -2,7 +2,7 @@ let items = document.querySelectorAll('.slider .item');
     let next = document.getElementById('next');
     let prev = document.getElementById('prev');
     
-    let active = 1;
+    let active = 0;
     function loadShow(){
         let stt = 0;
         items[active].style.transform = `none`;
@@ -11,7 +11,7 @@ let items = document.querySelectorAll('.slider .item');
         items[active].style.opacity = 1;
         for(var i = active + 1; i < items.length; i++){
             stt++;
-            items[i].style.transform = `translateX(${150*stt}px) scale(${1 - 0.2*stt}) perspective(30px) rotateY(-1deg)`;
+            items[i].style.transform = `translateX(${150*stt}px) scale(${1 - 0.2*stt}) perspective(35px) rotateY(-1deg)`;
             items[i].style.zIndex = -stt;
             items[i].style.filter = 'blur(0.2px)';
             items[i].style.opacity = stt > 2 ? 0 : 0.6;

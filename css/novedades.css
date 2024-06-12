@@ -55,6 +55,15 @@ body {
     bottom: 0;
     font-size: 16px;
     padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.info-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
 }
 
 #next, #prev {
@@ -81,10 +90,10 @@ body {
     position: absolute;
     width: 100%;
     text-align: center;
-    top: 50px;
+    top: 100px;
 }
     
-.noti-logo{
+.noti-logo {
     width: 500px;
-    height: 100px;
+    height: 180px;
 }
