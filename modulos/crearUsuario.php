@@ -6,9 +6,6 @@ include("class.smtp.php");
 // Establecer la zona horaria a Buenos Aires, Argentina
 date_default_timezone_set('America/Argentina/Buenos_Aires');
 
-// var_dump($_POST);
-
-
 if(isset($_POST['dni'], $_POST['nombre'], $_POST['apellido'], $_POST['email'], $_POST['cargo'])){
     // Recibir datos del formulario
     $dni = $_POST['dni'];
@@ -29,22 +26,13 @@ if(isset($_POST['dni'], $_POST['nombre'], $_POST['apellido'], $_POST['email'], $
     
     if(mysqli_stmt_num_rows($stmtVerificar) > 0){
         echo 'duplicate_dni_or_email';
-        // exit;
-
+        exit;
     }
 
     // Insertar el nuevo usuario utilizando una consulta preparada
     $query = "INSERT INTO usuarios (dni, nombre, apellido, gmail, cargo, estado) VALUES (?, ?, ?, ?, ?, ?)";
     $stmt = mysqli_prepare($conexion, $query);
     mysqli_stmt_bind_param($stmt, "issssb", $dni, $nombre, $apellido, $email, $cargo, $estado);
-
-
-
-
-
-
-
-
 
     if(mysqli_stmt_execute($stmt)){
         // Generar el token de verificación
@@ -92,7 +80,5 @@ if(isset($_POST['dni'], $_POST['nombre'], $_POST['apellido'], $_POST['email'], $
 
     mysqli_stmt_close($stmt);
     mysqli_close($conexion);
-}else {
-    echo "pacho algo";
 }
 ?>

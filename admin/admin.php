@@ -28,8 +28,9 @@
     <div id="containerHead">
         <div id="inner-containerHead">
             <div class="d-flex flex-column align-items-center">
-                <a id="sessionButton" href="../main/login.php" class="btn btn-success">Iniciar sesión</a>
-                <a id="logoutLink" href="../modulos/logout.php" class="btn btn-danger d-none">Cerrar sesión</a>
+                <a id="sessionButton" href="main/login.php" class="btn btn-success">Iniciar sesión</a>
+                <a id="logoutLink" href="modulos/logout.php" class="btn btn-danger d-none">Cerrar sesión</a>
+                <a id="gestionar" href="../modulos/gestionarUsuarios.php" class="btn btn-success d-none">Gestionar</a>
             </div>
             <div class="itemHead">
                 <a href="#"><img src="../imagenes/libro.png" class="imgBtnHead" alt="Novedades"></a>
@@ -81,6 +82,8 @@
                 
                 const logoutLink = document.getElementById('logoutLink');
                 logoutLink.classList.remove('d-none');
+                const gestionar = document.getElementById('gestionar');
+                gestionar.classList.remove('d-none');
             }
         });
     </script>

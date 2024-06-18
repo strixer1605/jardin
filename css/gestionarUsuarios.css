@@ -1,0 +1,273 @@
+body {
+    padding-top: 0;
+    padding-bottom: 5em;
+    background-color: #f4f4f4 !important;
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    flex: 1;
+    width: 100%;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.row {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.col {
+    flex: 1;
+    max-width: 50%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.row {
+    display: flex;
+    justify-content: center;
+}
+
+.col {
+    flex: 0 0 auto; /* Establece el tamaño máximo de las columnas en auto */
+}
+
+.container-body{
+    max-width: 100%; /* Ajusta el ancho máximo al 100% */
+    width: 100%;
+    margin: 20px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 580px;
+}
+
+.container-body2 {
+    width: 90%; /* Ancho del 90% del tamaño de su contenedor padre */
+    margin: 20px auto; /* Margen de 20px en la parte superior e inferior y centrado horizontalmente */
+    padding: 20px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-height: 600px; /* Altura máxima de 600px */
+    overflow-y: auto; /* Scroll vertical si el contenido excede la altura */
+}
+    
+.container-body3{
+    max-width: 100%; /* Ajusta el ancho máximo al 100% */
+    width: 100%;
+    margin: 20px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 580px / 2;
+}
+
+.titulo {
+    text-align: center;
+}
+
+#logo-container {
+    margin-top: 80px;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-group {
+    width: 100%;
+}
+
+input[type="text"],
+input[type="email"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+#cargo, #area {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 0px;
+}
+
+.btn-success {
+    width: 50%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 0px;
+    margin-top: 11px;
+}
+
+table {
+    border-collapse: collapse;
+    margin-top: 0px;
+    width: 100%;
+}
+
+th, td {
+    padding: 8px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.confirmar, .deshabilitar {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.deshabilitar {
+    /* Eliminar el ancho fijo */
+    width: 60.16px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    /* Agregar margen para centrar horizontalmente */
+    margin: 0 auto;
+}
+
+.deshabilitar {
+    background-color: #f44336;
+}
+
+.confirmar:hover {
+    background-color: #45a049;
+}
+
+.deshabilitar:hover {
+    background-color: #d32f2f;
+}
+
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.7);
+    z-index: 9999;
+}
+
+.loader--hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.loader::after {
+    content: "";
+    width: 75px;
+    height: 75px;
+    border: 15px solid #dddddd;
+    border-top-color: #009578;
+    border-radius: 50%;
+    animation: loading 2s ease infinite;
+}
+
+@keyframes loading {
+    from {
+        transform: rotate(0turn);
+    }
+    to {
+        transform: rotate(3turn);
+    }
+}
+
+
+footer {
+    width: 100%;
+    background-color: rgb(64, 165, 221);
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    #logo-container {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 425px) {
+    #logo-container {
+        margin-top: 80px;
+        margin-bottom: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    body {
+        min-height: 100vh;
+        padding-bottom: 100px;
+        width: 800px;
+    }
+
+    .container-body {
+        margin-bottom: 30px;
+    }
+
+    footer {
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    input[type="text"],
+    input[type="email"],
+    select,
+    button {
+        width: 100%;
+    }
+}
