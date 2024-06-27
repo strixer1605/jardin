@@ -27,7 +27,7 @@
     <div class="col-12 col-md-6">
         <div class="container-body">
             <div class="form-group form-container">
-                <a class="btn btn-danger mb-2" href="../index.php" role="button" style="color: white; width:100px; height: auto;">
+                <a class="btn btn-danger mb-2" href="../admin/admin.php" role="button" style="color: white; width:100px; height: auto;">
                     <img src="../imagenes/arrow_return_icon_175872.png" style="width: 20px; height: auto;"> Volver
                 </a>
                 <br><br>
